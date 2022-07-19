@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio Sesion</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <main>
+
+<section class="contenedor-inicio">
+
+    <!-- Formulario Inicio Sesion -->
+    <form class="formulario-inicio shadow-lg p-3">
+        <h2 class="tituloForm">Iniciar Sesion</h2>
+        <div class="mb-1">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="inicioEmail" aria-describedby="emailHelp" placeholder="Ingresa tu email." required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="inicioContraseña" placeholder="Ingresa tu contraseña." required>
+        </div>
+    <button type="submit" id="botonInicio" class="btn btn-secondary">Ingresar</button></a>
+    </form>
+
+    <section class="form1">
+        <div>
+            <h1 class="titulo">Almacenaje</h1>
+        </div>
+
+            <p class="pregunta">Aun no estas registrado?</p>
+            <button class="btn btn-dark" class="form2__cont__btn" id="BotonReg">Registrarme</button>
+
+    </section>
+
+
+    <!-- Formulario Registro-->
+    <form class="formulario-Registro shadow-lg p-3">
+    <h2 class="tituloForm">Registro</h2>
+    <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Nombre</label>
+        <input type="text" name="nombre" class="form-control" id="regNombre"
+            placeholder="Ingresa tu nombre." required>
+    </div>
+    <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Apellido</label>
+        <input type="text" name="apellido" class="form-control" id="regApellido"
+            placeholder="Ingresa tu apellido." required>
+    </div>
+    <div class="mb-1">
+        <label for="exampleInputEmail1" class="form-label">Email</label>
+        <input type="email" name="registroEmail" class="form-control" id="regEmail"
+            aria-describedby="emailHelp" placeholder="Ingresa tu email." required>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+        <input type="password" name="regContraseña" class="form-control" id="regContraseña"
+            placeholder="Ingresa una contraseña." required>
+    </div>
+    <!-- BOTONES -->
+    <button type="submit" id="botonRegistro" class="btn btn-secondary">Registrarme</button></a>
+</form>
+
+<section class="form2">
+    <div>
+        <h1 class="titulo">Almacenaje</h1>
+    </div>
+        <p class="pregunta">Ya tienes una cuenta??</p>
+        <button class="btn btn-dark" class="form2__cont__btn" id="BotonIng">Ingresar</button>
+
+</section>
+
+</section>
+    </main>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/inicio-sesion.js"></script>
+</body>
+</html>

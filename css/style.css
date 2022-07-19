@@ -1,0 +1,452 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: url("https://cdn.wallpapersafari.com/58/48/3OAc5y.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.prueba{
+  background:#bbbbbb;
+}
+.tituloForm{
+  color: #b8b8bb;
+}
+
+.form-label{
+  color: #b8b8bb;
+}
+.formulario-inicio{
+    grid-column: 5/6;
+    width: 500px;
+    margin-left: 15%;
+    margin-top: 15%;
+    border-radius: 10px;
+    background-color: #474a59;
+    animation:fadeIn; 
+    animation-duration: 2s;
+    position: absolute;
+}
+
+.formulario-Registro{
+    width: 500px;
+    margin-top: 10%;
+    margin-left: 60%;
+    border-radius: 10px;
+    background-color: #474a59;
+    position: absolute;
+    animation:fadeIn; 
+    animation-duration: 2s;
+    display: none;
+
+}
+
+.form1{
+  margin-top: 17%;
+  margin-left: 75%;
+  color: #fcfcfc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+}
+
+.form1 .titulo{
+  color: #000000;
+  margin-right: 50px;
+
+}
+.form2{
+  margin-top: 17%;
+  margin-left: 27%;
+  color: #fcfcfc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  display: none;
+}
+
+.form2 .titulo{
+  color: #000000;
+  margin-right: 70px;
+}
+.form2 div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #807676;
+}
+.pregunta{
+  text-align: center;
+  margin: 10px 0px;
+  font-size: 25px;
+}
+
+.titulo{
+  font-size: 35px;
+  color: #fff;
+  
+}
+
+#BotonIng{
+  margin-left: 80px;
+}
+
+/* -----------------------------------------------almacenaje--------------------------------------------------------- */
+.contenedor-header{
+display: grid;
+grid-template-columns: repeat(5,1fr);
+grid-template-rows: repeat(1,1fr);
+grid-template-areas: 
+"titulo nav nav nav cerrar";
+background-color: #fff;
+}
+
+
+
+.logo{
+  margin-left:50px;
+  grid-area: titulo;
+}
+
+.logo img{
+  margin-top: 5px;
+  height: 50px;
+}
+
+.logo2{
+  margin-left:50px;
+  grid-area: titulo;
+  opacity: 0;
+}
+.logo2 img{
+  width: 238px;
+  height: 50px;
+  margin-top: 5px;
+}
+
+ul{
+  margin-right: 200px;
+  grid-area: nav;
+  width: 100%;
+  display: flex;
+  font-size: 18px;
+  list-style: none;
+  color: black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+li{
+  margin-left: 50px;
+  margin-top: 15px;
+}
+
+#cerrarSesion{
+  position: absolute;
+  top: 10px;
+  left: 90%;
+}
+
+li a{
+  text-decoration: none;
+  color: #000;
+}
+.btn{
+  margin-left: 5px;
+}
+
+li a:hover{
+  color: #bbbbbb;
+}
+
+li:hover{
+  color: #807676;
+}
+
+
+.Almacenaje{
+    font-size: 20px;
+}
+
+.tituloForm{
+  margin-right: 50px;
+}
+
+.contenedor-formulario{
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: repeat(1,1fr);
+
+}
+
+.oculto{
+  display: none;
+}
+
+.formulario{
+  margin-top: 20px;
+  grid-column: 4/10;
+  grid-row: 1/2;
+  background-color: #474a59;
+  opacity: 1;
+  transition: all .5s;
+  border-radius: 10px;
+
+  }
+  
+
+
+
+
+  form label{
+    color: black;
+  }
+
+form input{
+    width: 0px;
+    margin-bottom: 10px;
+    padding: 3px;
+    color: black;
+    opacity: 1;
+
+  }
+
+
+option{
+  margin-top: 20px;
+}
+
+  .formularioEliminar{
+    display: none;
+    margin-left: 35px;
+    height: 480px;
+    width: 300px;
+    margin-top: 20px;
+    grid-column: 10/12;
+    border-radius: 10px;
+    background-color:#474a59;
+    opacity: 0;
+  }
+
+
+
+
+  #boton1{
+    width: 140px;
+  }
+
+
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.botones{
+  display: flex;
+  margin-bottom: 5px;
+}
+
+  .modificaciontexto{
+    font-size: 50px;
+    color: white;
+  }
+
+.aparecer{
+  display: block;
+  opacity: 1;
+
+}
+.desaparecer{
+  opacity: 0;
+}
+
+.error{
+  color: #cc2f2f;
+  font-size: 25px;
+  padding-left: 100px;
+  text-decoration: underline;
+}
+
+#ejemploBD{
+  width: 790px;
+  margin-left: 550px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+  /* -----------------------------CARDS----------------------------------- */
+
+  #cardcontainer{
+    margin-left: 170px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+  .card{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    background: url("https://colorate.azurewebsites.net/SwatchColor/BBBBBB") repeat;
+}
+
+.card1{
+    position: relative;
+    width: 350px;
+    height: 450px;
+    
+}
+
+.card1 .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+
+.card1 .front{
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.card1 .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card1 .front h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    top: 0%;
+    height: 90px;
+    line-height: 45px;
+    color: #fff;
+    background: rgb(0, 0, 0, .4);
+    text-align: center;
+}
+.card1 .front p{
+  position: absolute;
+  bottom: 00;
+  width: 100%;
+  height: 40px;
+  line-height: 45px;
+  color: #fff;
+  background: rgb(0, 0, 0, .4);
+  text-align: center;
+}
+
+.card1 .back{
+    transform: perspective(600px) rotateY(180deg);
+    background: url("https://colorate.azurewebsites.net/SwatchColor/BBBBBB") repeat;
+    padding: 15px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card1 .back h3{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 20px;
+    text-decoration: underline;
+
+}
+
+.card1 .back p{
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+.card1:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card1:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+
+/* animacion de carga */
+
+#contenedor_carga{
+  background-color: rgba(180, 180, 180, 0.801);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  z-index: 10000;
+}
+
+#carga{
+  border: 15px solid #ccc;
+  border-top-color: rgb(3, 3, 3);
+  border-top-style:groove ;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-animation: girar 1.5s linear infinite;
+  -o-animation: girar 1.5s linear infinite;
+  animation: girar 1.5s linear infinite;
+}
+
+@keyframes girar{
+  from{transform: rotate(0deg);}
+  to{transform: rotate(360deg);}
+}
+
+
+
+
+@media screen and (min-width: 1200px) and (max-width: 1888px) {
+
+  #cardcontainer{
+    margin-left: 100px;
+    margin-right: 20px;
+  }
+
+  .contenedor-formulario{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(1,1fr);
+  
+  }
+
+  .formulario{
+    width: 800px;
+    grid-column: 2/3;
+    }
+
+    .formularioEliminar{
+      margin-right: 15px;
+      margin-left: 0%;
+    }
+    #ejemploBD{
+      width: 790px;
+      margin-left: 280px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+}

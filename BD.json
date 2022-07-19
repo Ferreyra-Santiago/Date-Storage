@@ -1,0 +1,31 @@
+[
+    {
+    "nombre": "santiago",
+    "apellido": "ferreyra",
+    "genero": "1",
+    "fechaNacimiento":"2002-03-23",
+    "edad": "20",
+    "dni": "43884144",
+    "localidad": "Arroyito",
+    "Domicilio": "avenida siempreviva 742",
+    "codigoPostal": "2434",
+    "telefono": "3576466356",
+    "estadoCivil":"Juntado/a",
+    "trabajo":"desempleado"
+},
+
+{
+    "nombre": "juliana",
+    "apellido": "migotti",
+    "genero": "2",
+    "fechaNacimiento":"2004-02-18",
+    "edad": "18",
+    "dni": "44864153",
+    "localidad": "El tio",
+    "Domicilio": "av mariano moreno 864",
+    "codigoPostal": "3424",
+    "telefono": "3576575356",
+    "estadoCivil":"Juntado/a",
+    "trabajo":"desempleado"
+}
+]
