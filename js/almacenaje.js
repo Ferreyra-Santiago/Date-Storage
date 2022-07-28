@@ -1,4 +1,5 @@
 // llamar elementos del html 
+const body = document.body
 const formulario = document.querySelector(".formulario")
 const nombre = document.querySelector("#nombre")
 const apellido = document.querySelector("#apellido")
@@ -22,9 +23,8 @@ const formularioEliminar = document.querySelector(".formularioEliminar")
 const nombreEliminar = document.querySelector("#nombreEliminar")
 const dniEliminar = document.querySelector("#dniEliminar")
 const apellidoEliminar = document.querySelector("#apellidoEliminar")
-const ejemploBD = document.querySelector("#ejemploBD") 
-const botonBD = document.querySelector("#botonBD")
 const cerrarSesion = document.querySelector("#cerrarSesion")
+const modo = document.querySelector("#modo")
 
 //algunas variables que utilizo
 let sexo;
@@ -156,7 +156,7 @@ const seAgrego = () =>{
         })
     Toast.fire({
         icon: 'success',
-        title: `se ah agregado
+        title: `Se a agregado
         ${nombre.value} ${apellido.value}`
     })
 }
@@ -270,104 +270,27 @@ const validarUsuario = () => {
                 }
             })
             }
+        if(nombre !== nombreEliminar.value || apellido !== apellidoEliminar.value || dni !== dniEliminar.value){
+            alert("no existe")
+        }
         }
     } 
 
 
-// Simulacion de traer la informacion atraves de una base de datos
-    let BaseDatos = async() =>{
-        try {
-        const resultados = await fetch("../BD.json")
-        const dato = await resultados.json()
-        const Toast = Swal.mixin({
-            toast: true,
-            position: 'top-end',
-            showConfirmButton: false,
-            timer: 4000,
-            timerProgressBar: true,
-            didOpen: (toast) => {
-                toast.addEventListener('mouseenter', Swal.stopTimer)
-                toast.addEventListener('mouseleave', Swal.resumeTimer)
-            }
-        })
-        
-            Toast.fire({
-            icon: 'success',
-            title: `La extracción de la Base de datos fue exitosa`
-        })
-        for( const informacion of dato){
-    
-            const {nombre, apellido, genero, fechaNacimiento, edad, dni, localidad, Domicilio, codigoPostal, telefono, estadoCivil, trabajo } = informacion
-    
-        const elemnto = document.createElement("div")
-        if(genero == 1){
-            sexo ="../img/bdhombre.png"
-            identifica= "Masculino"
-        }else if(genero == 2){
-            sexo = "../img/bdmujer.png"
-            identifica = "Femenino"
-        }else{
-            sexo = "../img/avatar-predeterminado.png"
-            identifica = "No definido"
-        }
-        elemnto.innerHTML =`
-        <div class="card">
-        <div class="card1">
-            <div class="face front">
-                <img src="${sexo}" alt="">
-                <h3>${nombre} ${apellido}</h3><br>
-                <p>D.N.I: ${dni}</p>
-            </div>
-            <div class="face back">
-                <h3>${nombre} ${apellido}</h3>
-                <p>Nombre: ${nombre || "No definido"} <br>
-                Apellido: ${apellido || "No definido"} <br>
-                Genero ${identifica || "No definido"} <br>
-                Fecha de nacimiento: ${fechaNacimiento || "No especificado"} <br>
-                Edad: ${edad  || "No definido"} <br>
-                D.N.I: ${dni  || "No definido"} <br>
-                Localidad: ${localidad || "No especificado"}<br>
-                Domicilio: ${Domicilio || "No especificado"}<br>
-                Codigo postal: ${codigoPostal  || "No especificado"} <br>
-                Telefono: ${telefono || "No especificado"}<br>
-                Estado Civil: ${estadoCivil  || "no definido"}<br>
-                Trabajo: ${trabajo || "No especificado"}</p></p>
-            </div>
-        </div>
-    </div>`
-    ejemploBD.append(elemnto);}}
-    
-        catch{
-            const Toast = Swal.mixin({
-                toast: true,
-                position: 'top-end',
-                showConfirmButton: false,
-                timer: 4000,
-                timerProgressBar: true,
-                didOpen: (toast) => {
-                    toast.addEventListener('mouseenter', Swal.stopTimer)
-                    toast.addEventListener('mouseleave', Swal.resumeTimer)
-                }
-            })
-            
-            Toast.fire({
-                icon: 'error',
-                title: `No se ha podido traer la informacion de la base de datos`
-            })
-            ejemploBD.classList.add("error")
-            ejemploBD.innerHTML = "No se ha podido traer la informacion de la base de datos"
-        }
-    }
-
-//evento que una ves toques el boton en el html te traiga la informacion y que tras 7s se borre automaticamente
-botonBD.addEventListener("click",()=>{
-    setTimeout(()=>{
-        BaseDatos()
-    },1500)
-    setTimeout(()=>{
-        ejemploBD.innerHTML =""
-    },7000)
+//modo oscuro o claro
+modo.addEventListener("click", function(){
+    let val=body.classList.toggle("dark")
+    localStorage.setItem("modo",val)
 })
+
+let valor=localStorage.getItem("modo")
+
+if (valor=="true") {
+    body.classList.add("dark")
+} else {
+    body.classList.remove("dark")
+}
+
 
 //evento para cerrar sesion y te lleve nuevamente al index para loguearse
 cerrarSesion.addEventListener("click", ()=>{

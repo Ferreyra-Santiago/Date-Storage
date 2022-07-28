@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>Date Storage</title>
 </head>
-<body class="prueba">
+<body class="body-almacenaje">
 
     <header class="contenedor-header">
     <div id="contenedor_carga">
@@ -19,12 +19,14 @@
         <div class="logo2"><img src="../img/logo-sin-titulo.png" alt="logo"></div>
     <nav>
         <ul>
-            <li id="botonBD">Base de datos</li>
             <li><a href="#cardcontainer">Personas almacenadas</a></li>
             <li id="botonOcultar">Ocultar formulario</li>
             <li type="submit" id="buttonDelate">Eliminar</li></a>
         </ul>
-            <button type="button" class="btn btn-outline-dark" id="cerrarSesion">Cerrar Sesion</button>
+        <div class="modo" id="modo">
+            <i class="fas fa-toggle-on"></i>
+        </div>
+            <button type="button" class="btn btn-secondary" id="cerrarSesion">Cerrar Sesion</button>
     </nav>
     </header>
 
@@ -134,7 +136,7 @@
     </div>
 
     </main>
-
+    <script src="https://kit.fontawesome.com/03a89292db.js" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/almacenaje.js"></script>
 </body>
