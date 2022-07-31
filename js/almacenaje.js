@@ -270,11 +270,9 @@ const validarUsuario = () => {
                 }
             })
             }
-        if(nombre !== nombreEliminar.value || apellido !== apellidoEliminar.value || dni !== dniEliminar.value){
-            alert("no existe")
         }
         }
-    } 
+
 
 
 //modo oscuro o claro
