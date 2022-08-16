@@ -247,7 +247,7 @@ const validarUsuario = () => {
         const { nombre, apellido ,dni } = usuario
 
         if (nombre === nombreEliminar.value && apellido=== apellidoEliminar.value && dni === dniEliminar.value) {
-            Swal.fire({
+            return Swal.fire({
                 title: `Seguro que quieres eliminar a ${nombreEliminar.value} ${apellidoEliminar.value}?`,
                 text: "los datos se perderan",
                 icon: 'warning',
@@ -270,6 +270,12 @@ const validarUsuario = () => {
                 }
             })
             }
+            Swal.fire({
+                icon: 'error',
+                title: `No se pudo encontrar
+                ${nombreEliminar.value} ${apellidoEliminar.value}.`,
+                text: `Verifica que el nombre o apellido esta bien escrito`,
+            })
         }
         }
 
