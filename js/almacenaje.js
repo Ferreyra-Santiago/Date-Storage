@@ -274,7 +274,7 @@ const validarUsuario = () => {
                 icon: 'error',
                 title: `No se pudo encontrar
                 ${nombreEliminar.value} ${apellidoEliminar.value}.`,
-                text: `Verifica que el nombre o apellido esta bien escrito`,
+                text: `Verifica que el Nombre, Apellido o D.N.I esta bien escrito`,
             })
         }
         }
